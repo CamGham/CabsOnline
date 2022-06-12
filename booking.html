@@ -1,0 +1,82 @@
+<!-- Cameron Graham 19084582
+Bookings form for user:
+Required and Optional input fields
+Date and Time pickers -->
+<!DOCTYPE html>
+<html>
+<img id="taxi" src="./images/lexi-anderson-G8wPrJyNqWQ-unsplash.jpg" />
+
+<head>
+    <title>CabsOnline Booking Form</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="xhr.js"></script>
+    <script type="text/javascript" src="booking.js"> </script>
+</head>
+
+
+<body>
+    <h1>CabsOnline Booking Form</h1>
+    <div id="bodycontainer">
+        <form id="bookingform">
+            <label id="subheading">Contact Info</label>
+            </br>
+            <label for="cname"> Customer Name (required):</label>
+            <input id="cname" type="text" name="cname" required>
+            </br>
+            <label for="phone"> Phone Number (10-12 digits):</label>
+            <input id="phone" type="text" name="phone" required minlength="10" maxlength="12">
+            </br>
+            </br>
+
+            <label id="subheading">Pickup Location</label>
+            </br>
+            <label for="unumber"> Unit Number:</label>
+            <input id="optional" type="text" name="unumber">
+            </br>
+            <label for="snumber"> Street Number (required):</label>
+            <input id="snumber" type="text" name="snumber" required>
+            </br>
+            <label for="stname"> Street Name (required):</label>
+            <input id="stname" type="text" name="stname" required>
+            </br>
+            <label for="sbname"> Suburb:</label>
+            <input id="optional" type="text" name="sbname">
+            </br>
+            </br>
+
+            <label id="subheading">When</label>
+            </br>
+            <label for="date"> Pick-Up Date:</label>
+            <input id="theDate" type="date" name="date" required>
+            </br>
+            <label for="time"> Pick-Up Time:</label>
+            <input id="theTime" type="time" name="time" required>
+            </br>
+            </br>
+
+            <label id="subheading">Destination</label>
+            </br>
+            <label for="dsbname"> Destination Suburb:</label>
+            <input id="optional" type="text" name="dsbname">
+            </br>
+            </br>
+
+            <div id="buttonContainer">
+                <!-- on click send input field values to booking.js for xhr request -->
+                <input id="submitButton" name="submit" type="button" onClick="postBooking('booking.php','cMess', cname.value, phone.value, unumber.value,
+         snumber.value, stname.value, sbname.value, dsbname.value, date.value, time.value) " value="Create Booking" />
+            </div>
+        </form>
+    </div>
+
+    <div id="targetDiv">
+        <p id="cMess" name="reference"></p>
+    </div>
+
+
+
+</body>
+
+</html>

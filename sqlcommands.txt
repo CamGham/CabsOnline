@@ -1,0 +1,9 @@
+Cameron Graham 19084582
+Table creation query:
+CREATE TABLE bookings (bookID varchar(8) NOT NULL UNIQUE, bookDate date NOT NULL, bookTime time NOT NULL,
+        status varchar(255), cname varchar(255) NOT NULL, phone varchar(12) NOT NULL, unumber varchar(255), snumber varchar(255) NOT NULL,
+        stname varchar(255) NOT NULL, sbname varchar(255), dsbname varchar(255), date date NOT NULL, time time NOT NULL)
+
+
+
+        

@@ -1,0 +1,34 @@
+<!-- Cameron Graham 19084582
+Form for admin:
+Searching bookings by booking reference
+Or search for unassigned bookings within the next 2 hours -->
+<!DOCTYPE html>
+<html>
+<img id="taxi" src="./images/lexi-anderson-G8wPrJyNqWQ-unsplash.jpg" />
+<head>
+    <title>CabsOnline Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="xhr.js"></script>
+    <script type="text/javascript" src="admin.js"> </script>
+</head>
+<body>
+    <h1 id="admin">CabsOnline Admin</h1>
+    <div id="bodycontainer2">
+        <form>
+            <label for="bsearch"> Search:</label>
+            <input id="search" type="text" name="bsearch" maxlength="8" placeholder="BRN00001">
+            <!--on click send search vlaue to admin js file for xhr request-->
+            <input id="submitButton" name="sbutton" type="button" onClick="searchBooking('admin.php','content', 'confirm', bsearch.value) "
+                value="Search Bookings" />
+        </form>
+    </div>
+    <div>
+        <p id="confirm"></p>
+    </div>
+    <div class="content">
+        <p name="reference">Search for a booking using the field above!</p>
+    </div>
+</body>
+
+</html>
